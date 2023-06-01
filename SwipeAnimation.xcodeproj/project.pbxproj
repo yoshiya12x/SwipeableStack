@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAFE8D0E2A28DA0900A781B5 /* SwipeAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE8D0D2A28DA0900A781B5 /* SwipeAnimationApp.swift */; };
+		EAFE8D102A28DA0900A781B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE8D0F2A28DA0900A781B5 /* ContentView.swift */; };
+		EAFE8D122A28DA0A00A781B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFE8D112A28DA0A00A781B5 /* Assets.xcassets */; };
+		EAFE8D162A28DA0A00A781B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFE8D152A28DA0A00A781B5 /* Preview Assets.xcassets */; };
+		EAFE8D202A28DA0A00A781B5 /* SwipeAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE8D1F2A28DA0A00A781B5 /* SwipeAnimationTests.swift */; };
+		EAFE8D2A2A28DA0A00A781B5 /* SwipeAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE8D292A28DA0A00A781B5 /* SwipeAnimationUITests.swift */; };
+		EAFE8D2C2A28DA0A00A781B5 /* SwipeAnimationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE8D2B2A28DA0A00A781B5 /* SwipeAnimationUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAFE8D1C2A28DA0A00A781B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAFE8D022A28DA0900A781B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAFE8D092A28DA0900A781B5;
+			remoteInfo = SwipeAnimation;
+		};
+		EAFE8D262A28DA0A00A781B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAFE8D022A28DA0900A781B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAFE8D092A28DA0900A781B5;
+			remoteInfo = SwipeAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAFE8D0A2A28DA0900A781B5 /* SwipeAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFE8D0D2A28DA0900A781B5 /* SwipeAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimationApp.swift; sourceTree = "<group>"; };
+		EAFE8D0F2A28DA0900A781B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EAFE8D112A28DA0A00A781B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAFE8D132A28DA0A00A781B5 /* SwipeAnimation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwipeAnimation.entitlements; sourceTree = "<group>"; };
+		EAFE8D152A28DA0A00A781B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EAFE8D1B2A28DA0A00A781B5 /* SwipeAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFE8D1F2A28DA0A00A781B5 /* SwipeAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimationTests.swift; sourceTree = "<group>"; };
+		EAFE8D252A28DA0A00A781B5 /* SwipeAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFE8D292A28DA0A00A781B5 /* SwipeAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimationUITests.swift; sourceTree = "<group>"; };
+		EAFE8D2B2A28DA0A00A781B5 /* SwipeAnimationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAFE8D072A28DA0900A781B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE8D182A28DA0A00A781B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE8D222A28DA0A00A781B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAFE8D012A28DA0900A781B5 = {
+			isa = PBXGroup;
+			children = (
+				EAFE8D0C2A28DA0900A781B5 /* SwipeAnimation */,
+				EAFE8D1E2A28DA0A00A781B5 /* SwipeAnimationTests */,
+				EAFE8D282A28DA0A00A781B5 /* SwipeAnimationUITests */,
+				EAFE8D0B2A28DA0900A781B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAFE8D0B2A28DA0900A781B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE8D0A2A28DA0900A781B5 /* SwipeAnimation.app */,
+				EAFE8D1B2A28DA0A00A781B5 /* SwipeAnimationTests.xctest */,
+				EAFE8D252A28DA0A00A781B5 /* SwipeAnimationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAFE8D0C2A28DA0900A781B5 /* SwipeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE8D0D2A28DA0900A781B5 /* SwipeAnimationApp.swift */,
+				EAFE8D0F2A28DA0900A781B5 /* ContentView.swift */,
+				EAFE8D112A28DA0A00A781B5 /* Assets.xcassets */,
+				EAFE8D132A28DA0A00A781B5 /* SwipeAnimation.entitlements */,
+				EAFE8D142A28DA0A00A781B5 /* Preview Content */,
+			);
+			path = SwipeAnimation;
+			sourceTree = "<group>";
+		};
+		EAFE8D142A28DA0A00A781B5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE8D152A28DA0A00A781B5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EAFE8D1E2A28DA0A00A781B5 /* SwipeAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE8D1F2A28DA0A00A781B5 /* SwipeAnimationTests.swift */,
+			);
+			path = SwipeAnimationTests;
+			sourceTree = "<group>";
+		};
+		EAFE8D282A28DA0A00A781B5 /* SwipeAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE8D292A28DA0A00A781B5 /* SwipeAnimationUITests.swift */,
+				EAFE8D2B2A28DA0A00A781B5 /* SwipeAnimationUITestsLaunchTests.swift */,
+			);
+			path = SwipeAnimationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAFE8D092A28DA0900A781B5 /* SwipeAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFE8D2F2A28DA0A00A781B5 /* Build configuration list for PBXNativeTarget "SwipeAnimation" */;
+			buildPhases = (
+				EAFE8D062A28DA0900A781B5 /* Sources */,
+				EAFE8D072A28DA0900A781B5 /* Frameworks */,
+				EAFE8D082A28DA0900A781B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwipeAnimation;
+			productName = SwipeAnimation;
+			productReference = EAFE8D0A2A28DA0900A781B5 /* SwipeAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAFE8D1A2A28DA0A00A781B5 /* SwipeAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFE8D322A28DA0A00A781B5 /* Build configuration list for PBXNativeTarget "SwipeAnimationTests" */;
+			buildPhases = (
+				EAFE8D172A28DA0A00A781B5 /* Sources */,
+				EAFE8D182A28DA0A00A781B5 /* Frameworks */,
+				EAFE8D192A28DA0A00A781B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAFE8D1D2A28DA0A00A781B5 /* PBXTargetDependency */,
+			);
+			name = SwipeAnimationTests;
+			productName = SwipeAnimationTests;
+			productReference = EAFE8D1B2A28DA0A00A781B5 /* SwipeAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAFE8D242A28DA0A00A781B5 /* SwipeAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFE8D352A28DA0A00A781B5 /* Build configuration list for PBXNativeTarget "SwipeAnimationUITests" */;
+			buildPhases = (
+				EAFE8D212A28DA0A00A781B5 /* Sources */,
+				EAFE8D222A28DA0A00A781B5 /* Frameworks */,
+				EAFE8D232A28DA0A00A781B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAFE8D272A28DA0A00A781B5 /* PBXTargetDependency */,
+			);
+			name = SwipeAnimationUITests;
+			productName = SwipeAnimationUITests;
+			productReference = EAFE8D252A28DA0A00A781B5 /* SwipeAnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAFE8D022A28DA0900A781B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EAFE8D092A28DA0900A781B5 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					EAFE8D1A2A28DA0A00A781B5 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = EAFE8D092A28DA0900A781B5;
+					};
+					EAFE8D242A28DA0A00A781B5 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = EAFE8D092A28DA0900A781B5;
+					};
+				};
+			};
+			buildConfigurationList = EAFE8D052A28DA0900A781B5 /* Build configuration list for PBXProject "SwipeAnimation" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAFE8D012A28DA0900A781B5;
+			productRefGroup = EAFE8D0B2A28DA0900A781B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAFE8D092A28DA0900A781B5 /* SwipeAnimation */,
+				EAFE8D1A2A28DA0A00A781B5 /* SwipeAnimationTests */,
+				EAFE8D242A28DA0A00A781B5 /* SwipeAnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAFE8D082A28DA0900A781B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFE8D162A28DA0A00A781B5 /* Preview Assets.xcassets in Resources */,
+				EAFE8D122A28DA0A00A781B5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE8D192A28DA0A00A781B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE8D232A28DA0A00A781B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAFE8D062A28DA0900A781B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFE8D102A28DA0900A781B5 /* ContentView.swift in Sources */,
+				EAFE8D0E2A28DA0900A781B5 /* SwipeAnimationApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE8D172A28DA0A00A781B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFE8D202A28DA0A00A781B5 /* SwipeAnimationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFE8D212A28DA0A00A781B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFE8D2C2A28DA0A00A781B5 /* SwipeAnimationUITestsLaunchTests.swift in Sources */,
+				EAFE8D2A2A28DA0A00A781B5 /* SwipeAnimationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAFE8D1D2A28DA0A00A781B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAFE8D092A28DA0900A781B5 /* SwipeAnimation */;
+			targetProxy = EAFE8D1C2A28DA0A00A781B5 /* PBXContainerItemProxy */;
+		};
+		EAFE8D272A28DA0A00A781B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAFE8D092A28DA0900A781B5 /* SwipeAnimation */;
+			targetProxy = EAFE8D262A28DA0A00A781B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EAFE8D2D2A28DA0A00A781B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EAFE8D2E2A28DA0A00A781B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EAFE8D302A28DA0A00A781B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwipeAnimation/SwipeAnimation.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwipeAnimation/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yoppie.SwipeAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAFE8D312A28DA0A00A781B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwipeAnimation/SwipeAnimation.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SwipeAnimation/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yoppie.SwipeAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EAFE8D332A28DA0A00A781B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yoppie.SwipeAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipeAnimation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwipeAnimation";
+			};
+			name = Debug;
+		};
+		EAFE8D342A28DA0A00A781B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yoppie.SwipeAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipeAnimation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwipeAnimation";
+			};
+			name = Release;
+		};
+		EAFE8D362A28DA0A00A781B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yoppie.SwipeAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwipeAnimation;
+			};
+			name = Debug;
+		};
+		EAFE8D372A28DA0A00A781B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yoppie.SwipeAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwipeAnimation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAFE8D052A28DA0900A781B5 /* Build configuration list for PBXProject "SwipeAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFE8D2D2A28DA0A00A781B5 /* Debug */,
+				EAFE8D2E2A28DA0A00A781B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFE8D2F2A28DA0A00A781B5 /* Build configuration list for PBXNativeTarget "SwipeAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFE8D302A28DA0A00A781B5 /* Debug */,
+				EAFE8D312A28DA0A00A781B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFE8D322A28DA0A00A781B5 /* Build configuration list for PBXNativeTarget "SwipeAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFE8D332A28DA0A00A781B5 /* Debug */,
+				EAFE8D342A28DA0A00A781B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFE8D352A28DA0A00A781B5 /* Build configuration list for PBXNativeTarget "SwipeAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFE8D362A28DA0A00A781B5 /* Debug */,
+				EAFE8D372A28DA0A00A781B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAFE8D022A28DA0900A781B5 /* Project object */;
+}
