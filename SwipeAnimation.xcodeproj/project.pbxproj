@@ -14,6 +14,7 @@
 		EAFE8D202A28DA0A00A781B5 /* SwipeAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE8D1F2A28DA0A00A781B5 /* SwipeAnimationTests.swift */; };
 		EAFE8D2A2A28DA0A00A781B5 /* SwipeAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE8D292A28DA0A00A781B5 /* SwipeAnimationUITests.swift */; };
 		EAFE8D2C2A28DA0A00A781B5 /* SwipeAnimationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE8D2B2A28DA0A00A781B5 /* SwipeAnimationUITestsLaunchTests.swift */; };
+		EAFE8D3B2A2F530000A781B5 /* SwipeableStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFE8D3A2A2F530000A781B5 /* SwipeableStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		EAFE8D252A28DA0A00A781B5 /* SwipeAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFE8D292A28DA0A00A781B5 /* SwipeAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimationUITests.swift; sourceTree = "<group>"; };
 		EAFE8D2B2A28DA0A00A781B5 /* SwipeAnimationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EAFE8D3A2A2F530000A781B5 /* SwipeableStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				EAFE8D112A28DA0A00A781B5 /* Assets.xcassets */,
 				EAFE8D132A28DA0A00A781B5 /* SwipeAnimation.entitlements */,
 				EAFE8D142A28DA0A00A781B5 /* Preview Content */,
+				EAFE8D3A2A2F530000A781B5 /* SwipeableStack.swift */,
 			);
 			path = SwipeAnimation;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAFE8D102A28DA0900A781B5 /* ContentView.swift in Sources */,
+				EAFE8D3B2A2F530000A781B5 /* SwipeableStack.swift in Sources */,
 				EAFE8D0E2A28DA0900A781B5 /* SwipeAnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
