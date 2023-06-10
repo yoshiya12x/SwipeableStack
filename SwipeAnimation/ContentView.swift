@@ -60,7 +60,7 @@ struct ContentView: View {
                 subContentBackgroundColor: .blue,
                 parentCornerRadius: 10
             )
-            .frame(width: .infinity, height: 80)
+            .frame(height: 80)
             .padding(.horizontal, 10)
             
             SwipeableStack(
