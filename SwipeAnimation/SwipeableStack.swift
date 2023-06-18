@@ -64,7 +64,7 @@ struct SwipeableStack<MainContent:View, SubContent:View>: View {
                         .onEnded { value in
                             let width = calcChangedWidth(width: value.translation.width)
                             endedTranslationWidth = width
-                            if width <= subContentWidth * -1 {
+                            if width <= subContentWidth / 2 * -1 {
                                 translationWidth = subContentWidth * -1
                                 isActiveSubContent = true
                             } else {
