@@ -68,6 +68,7 @@ struct ContentView: View {
                     Image(systemName: "hand.thumbsup.fill")
                         .resizable()
                         .scaledToFit()
+                        .foregroundColor(Color.black)
                         .frame(width: 80, height: 80)
                 },
                 subContent: { Text("Good") },
@@ -77,6 +78,8 @@ struct ContentView: View {
             )
             .frame(width: 150, height: 80)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.white)
     }
 }
 
