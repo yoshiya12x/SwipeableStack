@@ -5,41 +5,62 @@
 
 import SwiftUI
 
-struct SwipeableStack<MainContent:View, SubContent:View>: View {
+enum SubContentType {
+    case left
+    case right
+    case nothing
+}
+
+struct SwipeableStack<MainContent:View, RightSubContent:View, LeftSubContent:View>: View {
     @State private var translationWidth: CGFloat = 0
     @State private var endedTranslationWidth: CGFloat = 0
-    @State private var isActiveSubContent: Bool = false
-    
+    @State private var subContentType: SubContentType = .nothing
+    @State private var subContentBackgroundColor: Color = .white
+
     private let mainContent: MainContent
-    private let subContent: SubContent
-    private let subContentWidth: CGFloat
+    private let rightSubContent: RightSubContent
+    private let leftSubContent: LeftSubContent
+    private let rightSubContentWidth: CGFloat
+    private let leftSubContentWidth: CGFloat
     private let mainContentBackgroundColor: Color
-    private let subContentBackgroundColor: Color
+    private let rightSubContentBackgroundColor: Color
+    private let leftSubContentBackgroundColor: Color
     private let parentCornerRadius: CGFloat
 
     init(
         @ViewBuilder mainContent: () -> MainContent,
-        @ViewBuilder subContent: () -> SubContent,
-        subContentWidth: CGFloat,
+        @ViewBuilder rightSubContent: () -> RightSubContent,
+        @ViewBuilder leftSubContent: () -> LeftSubContent,
+        rightSubContentWidth: CGFloat,
+        leftSubContentWidth: CGFloat,
         mainContentBackgroundColor: Color,
-        subContentBackgroundColor: Color,
+        rightSubContentBackgroundColor: Color,
+        leftSubContentBackgroundColor: Color,
         parentCornerRadius: CGFloat = 0
     ) {
         self.mainContent = mainContent()
-        self.subContent = subContent()
-        self.subContentWidth = subContentWidth
+        self.rightSubContent = rightSubContent()
+        self.leftSubContent = leftSubContent()
+        self.rightSubContentWidth = rightSubContentWidth
+        self.leftSubContentWidth = leftSubContentWidth
         self.mainContentBackgroundColor = mainContentBackgroundColor
-        self.subContentBackgroundColor = subContentBackgroundColor
+        self.rightSubContentBackgroundColor = rightSubContentBackgroundColor
+        self.leftSubContentBackgroundColor = leftSubContentBackgroundColor
         self.parentCornerRadius = parentCornerRadius
     }
 
     var body: some View {
         ZStack {
             HStack {
+                leftSubContent
+                    .frame(maxWidth: leftSubContentWidth, maxHeight: .infinity)
+                    .offset(x: calcLeftSubContentWidth(), y: 0)
+                    .animation(.spring(response: 0.6), value: endedTranslationWidth)
+                    .clipped()
                 Spacer()
-                subContent
-                    .frame(maxWidth: subContentWidth, maxHeight: .infinity)
-                    .offset(x: calcSubContentWidth(), y: 0)
+                rightSubContent
+                    .frame(maxWidth: rightSubContentWidth, maxHeight: .infinity)
+                    .offset(x: calcRightSubContentWidth(), y: 0)
                     .animation(.spring(response: 0.6), value: endedTranslationWidth)
                     .clipped()
             }
@@ -49,27 +70,38 @@ struct SwipeableStack<MainContent:View, SubContent:View>: View {
             mainContent
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(mainContentBackgroundColor)
-                .offset(x: 0 + translationWidth, y: 0)
+                .offset(x: translationWidth, y: 0)
                 .animation(.spring(response: 0.6), value: endedTranslationWidth)
                 .gesture(
                     DragGesture()
                         .onChanged { value in
-                            let width = calcChangedWidth(width: value.translation.width)
-                            if width <= 0 {
-                                translationWidth = width
-                            } else {
-                                translationWidth = 0
-                            }
+                            translationWidth = calcChangedWidth(width: value.translation.width)
+                            changeSubContentBackgroundColor()
                         }
                         .onEnded { value in
+                            endedTranslationWidth = value.translation.width
                             let width = calcChangedWidth(width: value.translation.width)
-                            endedTranslationWidth = width
-                            if width <= subContentWidth / 2 * -1 {
-                                translationWidth = subContentWidth * -1
-                                isActiveSubContent = true
-                            } else {
+                            changeSubContentType(width: width)
+
+                            switch subContentType {
+                            case .left:
+                                if width >= leftSubContentWidth / 2 {
+                                    translationWidth = leftSubContentWidth
+                                    subContentType = .left
+                                } else {
+                                    translationWidth = 0
+                                    subContentType = .nothing
+                                }
+                            case .right:
+                                if width <= rightSubContentWidth / 2 * -1 {
+                                    translationWidth = rightSubContentWidth * -1
+                                    subContentType = .right
+                                } else {
+                                    translationWidth = 0
+                                    subContentType = .nothing
+                                }
+                            case .nothing:
                                 translationWidth = 0
-                                isActiveSubContent = false
                             }
                         }
                 )
@@ -79,19 +111,49 @@ struct SwipeableStack<MainContent:View, SubContent:View>: View {
         .cornerRadius(parentCornerRadius)
     }
 
-    private func calcSubContentWidth() -> CGFloat {
-        let width = subContentWidth + translationWidth
+    private func calcRightSubContentWidth() -> CGFloat {
+        let width = rightSubContentWidth + translationWidth
         if width <= 0 {
             return 0
         }
         return width
     }
 
-    private func calcChangedWidth(width: CGFloat) -> CGFloat {
-        if isActiveSubContent {
-            return width + subContentWidth * -1
+    private func calcLeftSubContentWidth() -> CGFloat {
+        let width = (leftSubContentWidth * -1) + translationWidth
+        if width >= 0 {
+            return 0
         }
         return width
+    }
+
+    private func changeSubContentBackgroundColor() {
+        if translationWidth < 0 {
+            subContentBackgroundColor = rightSubContentBackgroundColor
+        } else if translationWidth > 0 {
+            subContentBackgroundColor = leftSubContentBackgroundColor
+        }
+    }
+
+    private func calcChangedWidth(width: CGFloat) -> CGFloat {
+        switch subContentType {
+        case .left:
+            return width + leftSubContentWidth
+        case .right:
+            return width + rightSubContentWidth * -1
+        case .nothing:
+            return width
+        }
+    }
+
+    private func changeSubContentType(width: CGFloat) {
+        if width < 0 {
+            subContentType = .right
+        } else if width > 0 {
+            subContentType = .left
+        } else {
+            subContentType = .nothing
+        }
     }
 }
 
@@ -100,10 +162,13 @@ struct SwipeableStack_Previews: PreviewProvider {
         VStack(spacing: 100) {
             SwipeableStack(
                 mainContent: { Text("main") },
-                subContent: { Text("sub") },
-                subContentWidth: 80,
+                rightSubContent: { Text("rightSub") },
+                leftSubContent: { Text("leftSub") },
+                rightSubContentWidth: 80,
+                leftSubContentWidth: 80,
                 mainContentBackgroundColor: .gray,
-                subContentBackgroundColor: .red
+                rightSubContentBackgroundColor: .red,
+                leftSubContentBackgroundColor: .red
             )
             .frame(width: 250, height: 80)
 
@@ -118,7 +183,7 @@ struct SwipeableStack_Previews: PreviewProvider {
                             .frame(width: 30, height: 30)
                     }
                 },
-                subContent: {
+                rightSubContent: {
                     HStack(spacing: 0) {
                         Button(action: { print("ButtonA") }) {
                             Text("ButtonA")
@@ -145,9 +210,12 @@ struct SwipeableStack_Previews: PreviewProvider {
                         .background(Color.yellow)
                     }
                 },
-                subContentWidth: 170,
+                leftSubContent: { Text("leftSub") },
+                rightSubContentWidth: 170,
+                leftSubContentWidth: 80,
                 mainContentBackgroundColor: .brown,
-                subContentBackgroundColor: .blue,
+                rightSubContentBackgroundColor: .blue,
+                leftSubContentBackgroundColor: .red,
                 parentCornerRadius: 10
             )
             .frame(height: 80)
@@ -160,10 +228,13 @@ struct SwipeableStack_Previews: PreviewProvider {
                         .scaledToFit()
                         .frame(width: 80, height: 80)
                 },
-                subContent: { Text("Good") },
-                subContentWidth: 80,
+                rightSubContent: { Text("Good") },
+                leftSubContent: { Text("Good") },
+                rightSubContentWidth: 80,
+                leftSubContentWidth: 80,
                 mainContentBackgroundColor: .white,
-                subContentBackgroundColor: .cyan
+                rightSubContentBackgroundColor: .cyan,
+                leftSubContentBackgroundColor: .cyan
             )
             .frame(width: 150, height: 80)
         }

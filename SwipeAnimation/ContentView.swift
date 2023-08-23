@@ -10,10 +10,13 @@ struct ContentView: View {
         VStack(spacing: 100) {
             SwipeableStack(
                 mainContent: { Text("main") },
-                subContent: { Text("sub") },
-                subContentWidth: 80,
+                rightSubContent: { Text("rightSub") },
+                leftSubContent: { Text("leftSub") },
+                rightSubContentWidth: 80,
+                leftSubContentWidth: 120,
                 mainContentBackgroundColor: .gray,
-                subContentBackgroundColor: .red
+                rightSubContentBackgroundColor: .red,
+                leftSubContentBackgroundColor: .yellow
             )
             .frame(width: 250, height: 80)
 
@@ -28,7 +31,7 @@ struct ContentView: View {
                             .frame(width: 30, height: 30)
                     }
                 },
-                subContent: {
+                rightSubContent: {
                     HStack(spacing: 0) {
                         Button(action: { print("ButtonA") }) {
                             Text("ButtonA")
@@ -55,9 +58,12 @@ struct ContentView: View {
                         .background(Color.yellow)
                     }
                 },
-                subContentWidth: 170,
+                leftSubContent: { Text("leftSub") },
+                rightSubContentWidth: 170,
+                leftSubContentWidth: 80,
                 mainContentBackgroundColor: .brown,
-                subContentBackgroundColor: .blue,
+                rightSubContentBackgroundColor: .blue,
+                leftSubContentBackgroundColor: .red,
                 parentCornerRadius: 10
             )
             .frame(height: 80)
@@ -71,10 +77,13 @@ struct ContentView: View {
                         .foregroundColor(Color.black)
                         .frame(width: 80, height: 80)
                 },
-                subContent: { Text("Good") },
-                subContentWidth: 80,
+                rightSubContent: { Text("Good") },
+                leftSubContent: { Text("Not Good") },
+                rightSubContentWidth: 80,
+                leftSubContentWidth: 100,
                 mainContentBackgroundColor: .white,
-                subContentBackgroundColor: .cyan
+                rightSubContentBackgroundColor: .cyan,
+                leftSubContentBackgroundColor: .red
             )
             .frame(width: 150, height: 80)
         }
