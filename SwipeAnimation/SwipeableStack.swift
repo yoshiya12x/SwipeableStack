@@ -11,7 +11,11 @@ enum SubContentType {
     case nothing
 }
 
-struct SwipeableStack<MainContent:View, RightSubContent:View, LeftSubContent:View>: View {
+struct SwipeableStack<
+    MainContent:View,
+    RightSubContent:View,
+    LeftSubContent:View
+>: View {
     @State private var translationWidth: CGFloat = 0
     @State private var endedTranslationWidth: CGFloat = 0
     @State private var subContentType: SubContentType = .nothing
@@ -53,15 +57,27 @@ struct SwipeableStack<MainContent:View, RightSubContent:View, LeftSubContent:Vie
         ZStack {
             HStack {
                 leftSubContent
-                    .frame(maxWidth: leftSubContentWidth, maxHeight: .infinity)
+                    .frame(
+                        maxWidth: leftSubContentWidth,
+                        maxHeight: .infinity
+                    )
                     .offset(x: calcLeftSubContentWidth(), y: 0)
-                    .animation(.spring(response: 0.6), value: endedTranslationWidth)
+                    .animation(
+                        .spring(response: 0.6),
+                        value: endedTranslationWidth
+                    )
                     .clipped()
                 Spacer()
                 rightSubContent
-                    .frame(maxWidth: rightSubContentWidth, maxHeight: .infinity)
+                    .frame(
+                        maxWidth: rightSubContentWidth,
+                        maxHeight: .infinity
+                    )
                     .offset(x: calcRightSubContentWidth(), y: 0)
-                    .animation(.spring(response: 0.6), value: endedTranslationWidth)
+                    .animation(
+                        .spring(response: 0.6),
+                        value: endedTranslationWidth
+                    )
                     .clipped()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -71,16 +87,23 @@ struct SwipeableStack<MainContent:View, RightSubContent:View, LeftSubContent:Vie
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(mainContentBackgroundColor)
                 .offset(x: translationWidth, y: 0)
-                .animation(.spring(response: 0.6), value: endedTranslationWidth)
+                .animation(
+                    .spring(response: 0.6),
+                    value: endedTranslationWidth
+                )
                 .gesture(
                     DragGesture()
                         .onChanged { value in
-                            translationWidth = calcChangedWidth(width: value.translation.width)
+                            translationWidth = calcChangedWidth(
+                                width: value.translation.width
+                            )
                             changeSubContentBackgroundColor()
                         }
                         .onEnded { value in
                             endedTranslationWidth = value.translation.width
-                            let width = calcChangedWidth(width: value.translation.width)
+                            let width = calcChangedWidth(
+                                width: value.translation.width
+                            )
                             changeSubContentType(width: width)
 
                             switch subContentType {
@@ -94,7 +117,8 @@ struct SwipeableStack<MainContent:View, RightSubContent:View, LeftSubContent:Vie
                                 }
                             case .right:
                                 if width <= rightSubContentWidth / 2 * -1 {
-                                    translationWidth = rightSubContentWidth * -1
+                                    translationWidth =
+                                        rightSubContentWidth * -1
                                     subContentType = .right
                                 } else {
                                     translationWidth = 0
