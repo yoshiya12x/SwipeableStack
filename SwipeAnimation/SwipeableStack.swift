@@ -108,22 +108,10 @@ struct SwipeableStack<
 
                             switch subContentType {
                             case .left:
-                                if width >= leftSubContentWidth / 2 {
-                                    translationWidth = leftSubContentWidth
-                                    subContentType = .left
-                                } else {
-                                    translationWidth = 0
-                                    subContentType = .nothing
-                                }
+                                translationWidth = leftSubContentWidth
                             case .right:
-                                if width <= rightSubContentWidth / 2 * -1 {
-                                    translationWidth =
+                                translationWidth =
                                         rightSubContentWidth * -1
-                                    subContentType = .right
-                                } else {
-                                    translationWidth = 0
-                                    subContentType = .nothing
-                                }
                             case .nothing:
                                 translationWidth = 0
                             }
@@ -172,9 +160,17 @@ struct SwipeableStack<
 
     private func changeSubContentType(width: CGFloat) {
         if width < 0 {
-            subContentType = .right
+            if width <= rightSubContentWidth / 2 * -1 {
+                subContentType = .right
+            } else {
+                subContentType = .nothing
+            }
         } else if width > 0 {
-            subContentType = .left
+            if width >= leftSubContentWidth / 2 {
+                subContentType = .left
+            } else {
+                subContentType = .nothing
+            }
         } else {
             subContentType = .nothing
         }
